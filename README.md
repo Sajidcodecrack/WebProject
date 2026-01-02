@@ -228,18 +228,7 @@ This project is developed for academic and learning purposes.
 
 ## 👤 Author
 
-**Sajid**
+**Sajid Ahamed**
 Backend Developer
 
-```
-
----
-
-If you want, next I can:
-- Add **badges** (Node, MongoDB, License)
-- Create **API docs section**
-- Generate a **Postman collection**
-- Write a **CONTRIBUTING.md**
-
-Just say the word 🚀
 ```
