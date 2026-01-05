@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #EFE9E3;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #F9F8F6;
+  padding: 20px;
+}
+
+.logo {
+  height: 57px;
+  width: 67px;
+  margin: 5px 0 10px 10px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  margin-top: 14px;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+}
+
+.sidebar nav a.active {
+  background: #e7f0ff;
+  color: #2563eb;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+}
+
+/* HEADER */
+.header {
+  height: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F9F8F6;
+  padding: 0 20px;
+}
+
+.header p {
+  color: #777;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+/* INVENTORY */
+.inventory {
+  padding: 20px;
+}
+
+.inventory-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.inventory-actions input {
+  width: 250px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.add-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* TABLE */
+.inventory-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+  padding: 14px;
+  align-items: center;
+}
+
+.table-header {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #555;
+}
+
+.table-row {
+  border-top: 1px solid #eee;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product img {
+  border-radius: 6px;
+}
+
+/* STOCK COLORS */
+.stock.good { color: #16a34a; }
+.stock.low { color: #f59e0b; }
+.stock.out { color: #dc2626; }
+
+.status {
+  padding: 5px 5px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.status.in {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status.low {
+  background: #fef3c7;
+  color: #f59e0b;
+}
+
+.status.out {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ACTIONS */
+.actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.actions .restock {
+  background: #2563eb;
+  color: white;
+}

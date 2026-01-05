@@ -19,7 +19,7 @@
       </a>
       <a>➕ Add a New Product</a>
       <a href="vendor_orders.php" style="text-decoration: none;">🚚 Orders</a>
-      <a>📦 Stocks</a>
+      <a href="inventory.php" style="text-decoration: none;">📦 Inventory</a>
       <a>💰 Finance</a>
       <a>⭐ Reviews</a>
       <a>🚪 Log Out</a>
