@@ -14,14 +14,13 @@
     <div><img src="asset/sell-it logo.png" alt="" class="logo"></div>
 
     <nav>
-      <a class="active">
+      <a class="active" style="text-decoration: none;">
         📊 Dashboard
       </a>
       <a>➕ Add a New Product</a>
-      <a>📦 Orders</a>
-      <a>📈 Analytics</a>
+      <a href="vendor_orders.php" style="text-decoration: none;">🚚 Orders</a>
+      <a>📦 Stocks</a>
       <a>💰 Finance</a>
-      <a>⚙️ Settings</a>
       <a>⭐ Reviews</a>
       <a>🚪 Log Out</a>
     </nav>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/vendor_orders.css">
+    <title>vendor_orders</title>
+</head>
+<body>
+      <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <img src="asset/sell-it logo.png" class="logo" alt="Sell-It Logo">
+
+    <nav>
+      <a href="vendor.php">📊 Dashboard</a>
+      <a>➕ Add a New Product</a>
+      <a class="active">🚚 Orders</a>
+      <a>📦 Stocks</a>
+      <a>💰 Finance</a>
+      <a>⭐ Reviews</a>
+      <a>🚪 Log Out</a>
+    </nav>
+  </aside>
+
+
+  <!-- MAIN -->
+  <main class="main">
+
+
+  
+
+    <!-- HEADER -->
+    <div class="header">
+      <div>
+        <h2>Orders</h2>
+        <p>Manage and track your customer orders</p>
+      </div>
+
+      <div class="profile">
+        <img src="https://i.pravatar.cc/40" alt="">
+        <div>
+          <strong>John Doe</strong>
+          <span>Vendor</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDERS PAGE -->
+    <section class="orders-page">
+
+      <!-- ORDER STATS -->
+      <div class="order-stats">
+        <div class="stat-card pending">
+          <h3>Pending Orders</h3>
+          <p>12</p>
+        </div>
+
+        <div class="stat-card processing">
+          <h3>Processing Orders</h3>
+          <p>8</p>
+        </div>
+
+        <div class="stat-card completed">
+          <h3>Completed Orders</h3>
+          <p>34</p>
+        </div>
+      </div>
+
+      <!-- TABLE -->
+      <div class="orders-table-container">
+        <h3>Recent Orders</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Amount</th>
+              <th>Payment</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>#ORD-1021</td>
+              <td>Rahim Ahmed</td>
+              <td>Wireless Headphone</td>
+              <td>৳3,500</td>
+              <td>Paid</td>
+              <td>05 Jan 2026</td>
+              <td><span class="status pending">Pending</span></td>
+              <td><button class="view-btn">View</button></td>
+            </tr>
+
+            <tr>
+              <td>#ORD-1020</td>
+              <td>Arif Hasan</td>
+              <td>USB-C Charger</td>
+              <td>৳1,200</td>
+              <td>Paid</td>
+              <td>04 Jan 2026</td>
+              <td><span class="status processing">Processing</span></td>
+              <td><button class="view-btn">View</button></td>
+            </tr>
+
+            <tr>
+              <td>#ORD-1019</td>
+              <td>Sadman Khan</td>
+              <td>Smart Watch</td>
+              <td>৳6,999</td>
+              <td>Paid</td>
+              <td>03 Jan 2026</td>
+              <td><span class="status completed">Completed</span></td>
+              <td><button class="view-btn">View</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+
+  </main>
+
+</body>
+
+
+</html>
