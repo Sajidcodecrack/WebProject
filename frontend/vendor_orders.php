@@ -12,10 +12,10 @@
     <img src="asset/sell-it logo.png" class="logo" alt="Sell-It Logo">
 
     <nav>
-      <a href="vendor.php">📊 Dashboard</a>
+      <a href="vendor.php" style="text-decoration: none;">📊 Dashboard</a>
       <a>➕ Add a New Product</a>
       <a class="active">🚚 Orders</a>
-      <a>📦 Stocks</a>
+      <a href="inventory.php" style="text-decoration: none;">📦 Inventory</a>
       <a>💰 Finance</a>
       <a>⭐ Reviews</a>
       <a>🚪 Log Out</a>
