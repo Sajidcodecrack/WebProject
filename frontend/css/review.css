@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #EFE9E3;
+}
+
+.layout {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #F9F8F6;
+  padding: 20px;
+}
+
+.logo {
+  height: 57px;
+  width: 67px;
+  margin: 5px 0 10px 10px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  margin-top: 14px;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sidebar nav a.active {
+  background: #e7f0ff;
+  color: #2563eb;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+}
+
+/* HEADER */
+.header {
+  height: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F9F8F6;
+  padding: 0 20px;
+}
+
+.header p {
+  color: #777;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+/* REVIEW SUMMARY */
+.review-summary {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.summary-card {
+  background: #FFFAF2;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.rating-big {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.bar {
+  flex: 1;
+  background: #e5e7eb;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.bar div {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 4px;
+}
+
+/* TABLE */
+.reviews-table {
+  background: #FFFAF2;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.good { color: green; }
+.average { color: orange; }
+.bad { color: red; }
+
+/* RECENT REVIEWS */
+.recent-reviews {
+  padding: 20px;
+}
+
+.review-card {
+  background: #FFFAF2;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.review-card.low {
+  border-left: 4px solid red;
+}
