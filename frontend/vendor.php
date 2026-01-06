@@ -20,7 +20,7 @@
       <a>➕ Add a New Product</a>
       <a href="vendor_orders.php" style="text-decoration: none;">🚚 Orders</a>
       <a href="inventory.php" style="text-decoration: none;">📦 Inventory</a>
-      <a>💰 Finance</a>
+      <a href="vendor_finance.php" style="text-decoration: none;">💰 Finance</a>
       <a>⭐ Reviews</a>
       <a>🚪 Log Out</a>
     </nav>
@@ -46,33 +46,39 @@
     </div>
 
     <!-- STATS -->
-    <section class="stats">
-      <div class="card">
-        <span> <b>Total Sales</b></span>
-        <h3>24,580 tk 
-          <span ><img src="asset/div1.png" alt="" class="sells_Logo" ></span> 
-        </h3>
-      </div>
+ <section class="stats">
 
+  <div class="card">
+    <span><b>Total Sales</b></span>
+    <h3>
+      24,580 tk
+      <span>
+        <img src="asset/div1.png" alt="Sales" class="sells_Logo">
+      </span>
+    </h3>
+  </div>
 
-            <div class="card">
-        <span> <b>Total Orders</b></span>
-        <h3>1,247
-          <span ><img src="asset/div2.png" alt="" class="sells_Logo" ></span> 
-        </h3>
-      </div>
+  <div class="card">
+    <span><b>Total Orders</b></span>
+    <h3>
+      1,247
+      <span>
+        <img src="asset/div2.png" alt="Orders" class="sells_Logo">
+      </span>
+    </h3>
+  </div>
 
-                  <div class="card">
-        <span> <b>Earnings</b></span>
-        <h3>7,420 tk
-          <span ><img src="asset/div3.png" alt="" class="sells_Logo" ></span> 
-        </h3>
-      </div>
+  <div class="card">
+    <span><b>Total Earnings</b></span>
+    <h3>
+      7,4200 tk
+      <span>
+        <img src="asset/div3.png" alt="Earnings" class="sells_Logo">
+      </span>
+    </h3>
+  </div>
 
-
-
-
-    </section>
+</section>
 
     <!-- CHARTS -->
     <section class="charts">
