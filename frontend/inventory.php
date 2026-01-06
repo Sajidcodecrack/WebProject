@@ -19,7 +19,7 @@
       <a  href="vendor_orders.php" style="text-decoration: none;">🚚 Orders</a>
       <a class="active">📦 Inventory</a>
       <a href="vendor_finance.php" style="text-decoration: none;" >💰 Finance</a>
-      <a>⭐ Reviews</a>
+      <a href="review.php" style="text-decoration: none;">⭐ Reviews</a>
       <a>🚪 Log Out</a>
     </nav>
   </aside>
