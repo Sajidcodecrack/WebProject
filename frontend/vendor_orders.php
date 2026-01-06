@@ -16,7 +16,7 @@
       <a>➕ Add a New Product</a>
       <a class="active">🚚 Orders</a>
       <a href="inventory.php" style="text-decoration: none;">📦 Inventory</a>
-      <a>💰 Finance</a>
+      <a  href="vendor_finance.php" style="text-decoration: none;">💰 Finance</a>
       <a>⭐ Reviews</a>
       <a>🚪 Log Out</a>
     </nav>
