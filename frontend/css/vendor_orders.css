@@ -39,6 +39,11 @@
       color: #2563eb;
     }
 
+    .sidebar nav a.active,
+    .sidebar nav a:hover {
+    background: #e7f0ff;
+}
+
     /* MAIN */
     .main {
       flex: 1;
