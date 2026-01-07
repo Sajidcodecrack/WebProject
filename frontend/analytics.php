@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>analytics</title>
+    <link rel="stylesheet" href="css/analytics.css">
+
+</head>
+<body>
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+      <div><img src="asset/sell-it logo.png" alt="" class="logo"></div>
+    <nav>
+      <a href="admin_dashboard.php" style="text-decoration: none;">📊 Dashboard</a>
+      <a href="posts.php" style="text-decoration: none;">📫 Posts</a>
+      <a href="sellers.php" style="text-decoration: none;">🏬 Sellers</a>
+      <a class="active">📈 Analytics</a>
+      <a class="logout">🚪 Log Out</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h2>Admin Dashboard</h2>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/40" alt="">
+        <span>Rashid Khan</span>
+      </div>
+    </header>
+
+
+    <!-- ANALYTICS SECTION -->
+<section class="analytics">
+
+  <!-- TOP STATS -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h4>Total Revenue</h4>
+      <p>৳ 1,25,000</p>
+    </div>
+    <div class="stat-card">
+      <h4>Total Posts</h4>
+      <p>3,240</p>
+    </div>
+    <div class="stat-card">
+      <h4>Active Sellers</h4>
+      <p>620</p>
+    </div>
+    <div class="stat-card">
+      <h4>New Users (This Week)</h4>
+      <p>148</p>
+    </div>
+  </div>
+
+  <!-- CHART ROW 1 -->
+  <div class="chart-row">
+    <div class="chart-card">
+      <div class="chart-header">
+        <h3>Gross Revenue</h3>
+        <select id="revenueRange">
+          <option>Today</option>
+          <option selected>Last 7 Days</option>
+          <option>Last 30 Days</option>
+        </select>
+      </div>
+      <canvas id="revenueChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h3>Post Statistics</h3>
+      <canvas id="postStatusChart"></canvas>
+    </div>
+  </div>
+
+  <!-- CHART ROW 2 -->
+  <div class="chart-row">
+    <div class="chart-card">
+      <h3>Post Activity (Weekly)</h3>
+      <canvas id="postActivityChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h3>User Growth</h3>
+      <canvas id="userGrowthChart"></canvas>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+/* Gross Revenue */
+new Chart(document.getElementById('revenueChart'), {
+  type: 'line',
+  data: {
+    labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+    datasets: [{
+      label: 'Revenue (৳)',
+      data: [12000, 19000, 15000, 22000, 18000, 25000, 20000],
+      borderWidth: 2,
+      fill: true
+    }]
+  }
+});
+
+/* Post Status */
+new Chart(document.getElementById('postStatusChart'), {
+  type: 'pie',
+  data: {
+    labels: ['Active', 'Pending', 'Suspended'],
+    datasets: [{
+      data: [2400, 520, 320]
+    }]
+  }
+});
+
+/* Post Activity */
+new Chart(document.getElementById('postActivityChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+    datasets: [{
+      label: 'Posts',
+      data: [45, 60, 55, 80, 70, 90, 65]
+    }]
+  }
+});
+
+/* User Growth */
+new Chart(document.getElementById('userGrowthChart'), {
+  type: 'line',
+  data: {
+    labels: ['Week 1','Week 2','Week 3','Week 4'],
+    datasets: [{
+      label: 'New Users',
+      data: [120, 180, 150, 220],
+      borderWidth: 2
+    }]
+  }
+});
+</script>
+
+
+</body>
+</html>
