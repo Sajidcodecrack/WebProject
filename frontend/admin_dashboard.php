@@ -11,16 +11,14 @@
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <div class="logo">Sell-It</div>
+      <div><img src="asset/sell-it logo.png" alt="" class="logo"></div>
     <nav>
-      <a class="active">Dashboard</a>
-      <a>Users</a>
-      <a>Posts</a>
-      <a>Vendors</a>
-      <a>Analytics</a>
-      <a>Approvals</a>
-      <a>Settings</a>
-      <a class="logout">Log Out</a>
+      <a class="active">📊 Dashboard</a>
+      <a>📫 Posts</a>
+      <a>🏬 Vendors</a>
+      <a>🧑‍🎓 Users</a>
+      <a>📈 Analytics</a>
+      <a class="logout">🚪 Log Out</a>
     </nav>
   </aside>
 
@@ -78,7 +76,6 @@
       <div class="legend">
         <span class="active">Active</span>
         <span class="pending">Pending</span>
-        <span class="inactive">Inactive</span>
         <span class="suspended">Suspended</span>
       </div>
     </section>
@@ -94,6 +91,7 @@
             <th>Submitted</th>
             <th>Status</th>
             <th>Actions</th>
+            <th>Details</th>
           </tr>
         </thead>
         <tbody>
@@ -106,6 +104,9 @@
               <button class="approve">Approve</button>
               <button class="reject">Reject</button>
             </td>
+                        <td>
+              <button class="">📂</button>
+            </td>
           </tr>
           <tr>
             <td><span class="tag orange">Vendor Request</span></td>
@@ -115,6 +116,9 @@
             <td>
               <button class="approve">Approve</button>
               <button class="reject">Reject</button>
+            </td>
+                        <td>
+              <button class="">📂</button>
             </td>
           </tr>
           <tr>
@@ -126,6 +130,10 @@
               <button class="approve">Approve</button>
               <button class="reject">Reject</button>
             </td>
+            <td>
+              <button >📂</button>
+            </td>
+            
           </tr>
         </tbody>
       </table>
@@ -133,6 +141,7 @@
 
   </main>
 </div>
+<?php include("footer.php")?>
 
 </body>
 </html>
