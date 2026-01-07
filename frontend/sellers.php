@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sellers</title>
+    <link rel="stylesheet" href="css/sellers.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+      <div><img src="asset/sell-it logo.png" alt="" class="logo"></div>
+    <nav>
+      <a href="admin_dashboard.php" style="text-decoration: none;">📊 Dashboard</a>
+      <a href="posts.php" style="text-decoration: none;">📫 Posts</a>
+      <a class="active">🏬 Sellers</a>
+      <a>📈 Analytics</a>
+      <a class="logout">🚪 Log Out</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h2>Admin Dashboard</h2>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/40" alt="">
+        <span>Rashid Khan</span>
+      </div>
+    </header>
+
+    <!-- SELLERS SECTION -->
+    <section class="sellers-section">
+
+      <div class="sellers-top">
+        <h3>All Sellers</h3>
+        <input type="text" class="search-box" placeholder="Search by seller name or ID">
+      </div>
+
+      <div class="table-wrapper">
+        <table class="sellers-table">
+          <thead>
+            <tr>
+              <th>Seller ID</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Email</th>
+              <th>Freeze Account</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="vendor-id">VEN-102</td>
+              <td>Tech World</td>
+              <td><span class="badge vendor">Vendor</span></td>
+              <td>techworld@gmail.com</td>
+              <td>
+                <label class="freeze-toggle">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                  <span class="freeze-text">Freeze</span>
+                </label>
+              </td>
+              <td><button class="delete-btn">Delete</button></td>
+            </tr>
+
+            <tr>
+              <td class="student-id">STU-341</td>
+              <td>Rahim Uddin</td>
+              <td><span class="badge student">Student Seller</span></td>
+              <td>rahim@uiu.ac.bd</td>
+              <td>
+                <label class="freeze-toggle">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                  <span class="freeze-text">Freeze</span>
+                </label>
+              </td>
+              <td><button class="delete-btn">Delete</button></td>
+            </tr>
+
+            <tr>
+              <td class="vendor-id">VEN-208</td>
+              <td>Book Haven</td>
+              <td><span class="badge vendor">Vendor</span></td>
+              <td>bookhaven@gmail.com</td>
+              <td>
+                <label class="freeze-toggle">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                  <span class="freeze-text">Freeze</span>
+                </label>
+              </td>
+              <td><button class="delete-btn">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
