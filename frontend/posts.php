@@ -18,8 +18,8 @@
     <nav>
       <a href="admin_dashboard.php" style="text-decoration: none;">📊 Dashboard</a>
       <a class="active"  >📫 Posts</a>
-      <a  href="sellers.php" style="text-decoration: none;">🏬 Sellers</a>
-      <a>📈 Analytics</a>
+      <a href="sellers.php" style="text-decoration: none;">🏬 Sellers</a>
+      <a href="analytics.php" style="text-decoration: none;">📈 Analytics</a>
       <a class="logout">🚪 Log Out</a>
     </nav>
   </aside>
@@ -99,6 +99,6 @@
 </div>
 
 </div>
-<?php include("footer.php")?>
+
 </body>
 </html>

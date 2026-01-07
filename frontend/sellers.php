@@ -16,7 +16,7 @@
       <a href="admin_dashboard.php" style="text-decoration: none;">📊 Dashboard</a>
       <a href="posts.php" style="text-decoration: none;">📫 Posts</a>
       <a class="active">🏬 Sellers</a>
-      <a>📈 Analytics</a>
+      <a href="analytics.php" style="text-decoration: none;">📈 Analytics</a>
       <a class="logout">🚪 Log Out</a>
     </nav>
   </aside>
