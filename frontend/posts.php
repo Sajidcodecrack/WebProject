@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="css/admin_dashboard.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="css/posts.css" />
+
 </head>
 <body>
+    
 
 <div class="layout">
 
@@ -13,8 +16,8 @@
   <aside class="sidebar">
       <div><img src="asset/sell-it logo.png" alt="" class="logo"></div>
     <nav>
-      <a class="active">📊 Dashboard</a>
-      <a href="posts.php" style="text-decoration: none;">📫 Posts</a>
+      <a href="admin_dashboard.php" style="text-decoration: none;">📊 Dashboard</a>
+      <a class="active"  >📫 Posts</a>
       <a>🏬 Vendors</a>
       <a>🧑‍🎓 Users</a>
       <a>📈 Analytics</a>
@@ -34,54 +37,8 @@
       </div>
     </header>
 
-    <!-- STATS -->
-    <section class="stats">
-      <div class="card">
-        <p>Total Users</p>
-        <h3>12,543</h3>
-        <span class="up">+12% from last month</span>
-      </div>
-      <div class="card">
-        <p>Total Posts</p>
-        <h3>8,924</h3>
-        <span class="up">+8% from last month</span>
-      </div>
-      <div class="card">
-        <p>Total Vendors</p>
-        <h3>1,247</h3>
-        <span class="down">-3% from last month</span>
-      </div>
-    </section>
 
-    <!-- CHARTS -->
-    <section class="charts">
-      <div class="chart">
-        <h4>Gross Revenue</h4>
-        <div class="line-chart"></div>
-      </div>
-
-      <div class="chart">
-        <h4>Post Activity</h4>
-        <div class="bar-chart">
-          <span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PIE -->
-    <section class="chart wide">
-      <h4>Post Statistics</h4>
-      <div class="pie-chart"></div>
-      <div class="legend">
-        <span class="active">Active</span>
-        <span class="pending">Pending</span>
-        <span class="suspended">Suspended</span>
-      </div>
-    </section>
-
-    <!-- TABLE -->
-    <section class="table">
+        <section class="table">
       <h4>Pending Approvals</h4>
       <table>
         <thead>
@@ -141,7 +98,8 @@
 
   </main>
 </div>
-<?php include("footer.php")?>
 
+</div>
+<?php include("footer.php")?>
 </body>
 </html>
