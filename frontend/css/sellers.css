@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #e8dfd6;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #F9F8F6;
+  padding: 20px;
+}
+
+.logo {
+  height: 57px;
+  width: 67px;
+  margin: 5px 0 10px 10px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  margin-top: 14px;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: #e7f0ff;
+}
+
+.logout {
+  margin-top: 40px;
+  color: #b00020;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+}
+
+/* HEADER */
+.header {
+  height: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F9F8F6;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+/* SELLERS SECTION */
+.sellers-section {
+  padding: 20px;
+}
+
+.sellers-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.search-box {
+  width: 280px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* TABLE */
+.table-wrapper {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.sellers-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sellers-table th {
+  background: #f4f6f8;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.sellers-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+/* ID COLORS */
+.vendor-id {
+  color: #0a66c2;
+  font-weight: bold;
+}
+
+.student-id {
+  color: #00875a;
+  font-weight: bold;
+}
+
+/* BADGES */
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.vendor {
+  background: #e7f0ff;
+  color: #0a66c2;
+}
+
+.badge.student {
+  background: #e6f4ea;
+  color: #00875a;
+}
+
+/* FREEZE TOGGLE */
+.freeze-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.freeze-toggle input {
+  display: none;
+}
+
+.slider {
+  width: 42px;
+  height: 22px;
+  background: #ccc;
+  border-radius: 50px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+.freeze-toggle input:checked + .slider {
+  background: #ff4d4f;
+}
+
+.freeze-toggle input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.freeze-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #999;
+}
+
+.freeze-toggle input:checked ~ .freeze-text {
+  color: #ff4d4f;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #d9363e;
+}

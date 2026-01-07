@@ -15,8 +15,7 @@
     <nav>
       <a class="active">📊 Dashboard</a>
       <a href="posts.php" style="text-decoration: none;">📫 Posts</a>
-      <a>🏬 Vendors</a>
-      <a>🧑‍🎓 Users</a>
+      <a href="sellers.php" style="text-decoration: none;">🏬 Sellers</a>
       <a>📈 Analytics</a>
       <a class="logout">🚪 Log Out</a>
     </nav>
