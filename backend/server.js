@@ -13,6 +13,10 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/items", require("./routes/itemRoutes"));
 app.use("/api/groups", require("./routes/groupRoutes"));
+app.use("/api/admin", require("./routes/adminRoutes"));          // ✅ NEW
+app.use("/api/reports", require("./routes/reportRoutes"));      // ✅ NEW
+app.use("/api/notifications", require("./routes/notificationRoutes")); // ✅ NEW
+
 
 app.get("/", (req, res) => {
   res.send("Student Marketplace API Running");
