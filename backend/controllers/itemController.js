@@ -12,3 +12,13 @@ exports.getItems = async (req, res) => {
   const items = await Item.find({ status: "available" }).populate("seller", "name");
   res.json(items);
 };
+
+exports.updateItem = async (req, res) => {
+  const item = await Item.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.json(item);
+};
+
+exports.deleteItem = async (req, res) => {
+  await Item.findByIdAndDelete(req.params.id);
+  res.json({ message: "Item deleted" });
+};

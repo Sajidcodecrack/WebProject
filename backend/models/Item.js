@@ -5,6 +5,7 @@ const itemSchema = new mongoose.Schema(
     title: String,
     price: Number,
     image: String,
+    imageUrl: String,
     status: { type: String, enum: ["available", "sold"], default: "available" },
     seller: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   },
