@@ -58,3 +58,7 @@
         console.error(err);
       }
     }
+
+    // document.getElementById('log').addEventListener('click',function(){
+    //   window.location.href = "student-login.html";
+    // })
