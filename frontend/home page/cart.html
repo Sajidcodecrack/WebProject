@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campus Store – Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav" id="top">
+      <a href="index.html#home" class="logo">
+        <img src="logo.png" class="logo-img" alt="Sell Campus Logo">
+      </a>
+
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#category" class="nav-link">Category</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-search">
+        <i class="fa-solid fa-magnifying-glass icon" aria-hidden="true"></i>
+        <input type="search" placeholder="Search, find anything new" />
+      </div>
+
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Wishlist">
+          <span class="icon" aria-hidden="true">♡</span>
+        </button>
+        <a class="nav-icon-btn" aria-label="Cart" href="cart.html">
+          <span class="icon" aria-hidden="true">🛒</span>
+          <span class="nav-icon-badge">1</span>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- CART (reusing checkout-section styles) -->
+    <section class="checkout-section" id="cart">
+      <div class="container">
+        <header class="checkout-header">
+          <h1>Your Cart</h1>
+          <p class="hero-body" style="margin-inline:auto; max-width:520px;">
+            Review the items in your cart. When you’re ready, continue to checkout to confirm your purchase.
+          </p>
+        </header>
+
+        <div class="checkout-layout cart-layout">
+          <div class="checkout-card">
+            <h2>Cart items</h2>
+
+            <div class="cart-items">
+              <div class="cart-row cart-row--header">
+                <span>Product</span>
+                <span>Price</span>
+                <span>Qty</span>
+                <span>Subtotal</span>
+              </div>
+
+              <!-- Example item -->
+              <div class="cart-row">
+                <div class="cart-product">
+                  <div class="cart-thumb"></div>
+                  <div>
+                    <p class="cart-title">Crafted Notebook – Dotted</p>
+                    <p class="cart-meta">160 pages • A5</p>
+                  </div>
+                </div>
+                <span class="cart-price">Tk. 150.00</span>
+                <span class="cart-qty">1</span>
+                <span class="cart-subtotal">Tk. 150.00</span>
+              </div>
+
+              <!-- Add more items here if you want -->
+            </div>
+          </div>
+
+          <aside class="checkout-card">
+            <h2>Cart totals</h2>
+            <div class="order-summary-lines">
+              <div class="order-row">
+                <span>Subtotal</span>
+                <span>Tk. 150.00</span>
+              </div>
+              <div class="order-row">
+                <span>Shipping</span>
+                <span>Free</span>
+              </div>
+              <div class="order-total">
+                <span>Total</span>
+                <span>Tk. 150.00</span>
+              </div>
+            </div>
+
+            <a href="checkout.html" class="btn-place-order" style="text-align:center; text-decoration:none;">
+              Proceed to Checkout
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER FEATURES -->
+    <section class="footer-features">
+      <div class="container footer-feature-grid">
+        <div class="feature-card">
+          <h3>Free Delivery</h3>
+          <p>For all orders over $50, consectetur adipiscing elit. No hidden fees at checkout.</p>
+        </div>
+        <div class="feature-card">
+          <h3>90 Days Return</h3>
+          <p>If goods have problems, consectetur adipiscing elit. We’ll replace or refund.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Secure Payment</h3>
+          <p>100% secure payment, consectetur adipiscing elit using industry-standard encryption.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year-cart"></span> Sell Campus. All rights reserved.
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    const navToggle = document.getElementById("nav-toggle");
+    const header = document.querySelector(".site-header");
+    navToggle.addEventListener("click", () => {
+      header.classList.toggle("nav-mobile-open");
+    });
+
+    const backToTop = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.getElementById("year-cart").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
