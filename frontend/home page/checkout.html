@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campus Store – Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav" id="top">
+      <a href="index.html#home" class="logo">
+        <img src="logo.png" class="logo-img" alt="Sell Campus Logo">
+      </a>
+
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#category" class="nav-link">Category</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-search">
+        <i class="fa-solid fa-magnifying-glass icon" aria-hidden="true"></i>
+        <input type="search" placeholder="Search, find anything new" />
+      </div>
+
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Wishlist">
+          <span class="icon" aria-hidden="true">♡</span>
+        </button>
+        <a class="nav-icon-btn" aria-label="Cart" href="cart.html">
+          <span class="icon" aria-hidden="true">🛒</span>
+          <span class="nav-icon-badge">1</span>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- CHECKOUT -->
+    <section class="checkout-section" id="checkout">
+      <div class="container">
+        <header class="checkout-header">
+          <h1>Checkout</h1>
+          <p class="hero-body" style="margin-inline:auto; max-width:520px;">
+            Complete your details to place the order. You can always edit your cart before confirming payment.
+          </p>
+        </header>
+
+        <div class="checkout-layout">
+          <!-- Billing details -->
+          <div class="checkout-card" aria-label="Billing details">
+            <h2>Billing details</h2>
+            <div class="form-grid-two">
+              <div class="form-field">
+                <label class="form-label" for="first-name">First Name</label>
+                <input class="form-input" id="first-name" type="text" />
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="last-name">Last Name</label>
+                <input class="form-input" id="last-name" type="text" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="company">Company Name (optional)</label>
+              <input class="form-input" id="company" type="text" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="country">Country / Region</label>
+              <select class="form-select" id="country">
+                <option value="LK">Sri Lanka</option>
+                <option value="BD">Bangladesh</option>
+                <option value="IN">India</option>
+                <option value="US">United States</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="street">Street address</label>
+              <input class="form-input" id="street" type="text" placeholder="House number and street name" />
+            </div>
+
+            <div class="form-grid-two">
+              <div class="form-field">
+                <label class="form-label" for="town">Town / City</label>
+                <input class="form-input" id="town" type="text" />
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="province">Province</label>
+                <select class="form-select" id="province">
+                  <option>Western Province</option>
+                  <option>Eastern Province</option>
+                  <option>Northern Province</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-inline">
+              <div class="form-field">
+                <label class="form-label" for="zip">ZIP code</label>
+                <input class="form-input" id="zip" type="text" />
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="phone">Phone</label>
+                <input class="form-input" id="phone" type="tel" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="email">Email address</label>
+              <input class="form-input" id="email" type="email" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="note">Additional Information</label>
+              <textarea class="form-textarea" id="note" placeholder="Notes about your order, e.g. special delivery notes"></textarea>
+            </div>
+          </div>
+
+          <!-- Order summary -->
+          <aside class="checkout-card" aria-label="Order summary">
+            <h2>Order summary</h2>
+            <div class="order-summary-header">
+              <span>Product</span>
+              <span>Subtotal</span>
+            </div>
+            <div class="order-summary-lines">
+              <div class="order-row">
+                <span>Crafted Notebook x 1</span>
+                <span>Tk. 150.00</span>
+              </div>
+              <div class="order-row">
+                <span>Subtotal</span>
+                <span>Tk. 150.00</span>
+              </div>
+              <div class="order-total">
+                <span>Total</span>
+                <span id="order-total">Tk. 150.00</span>
+              </div>
+            </div>
+
+            <div>
+              <label class="payment-option is-active">
+                <input class="payment-radio" type="radio" name="payment" value="bank" checked />
+                <div>
+                  <div class="payment-option-title">Direct Bank Transfer</div>
+                  <p class="payment-option-desc">
+                    Make your payment directly into our bank account. Use your Order ID as the payment reference.
+                    Your order will be shipped after funds have cleared.
+                  </p>
+                </div>
+              </label>
+
+              <label class="payment-option">
+                <input class="payment-radio" type="radio" name="payment" value="cod" />
+                <div>
+                  <div class="payment-option-title">Cash on Delivery</div>
+                  <p class="payment-option-desc">Pay in cash to the courier when your order is delivered.</p>
+                </div>
+              </label>
+            </div>
+
+            <p class="checkout-privacy">
+              Your personal data will be used to support your experience throughout this website, to manage access to
+              your account, and for other purposes described in our privacy policy.
+            </p>
+
+            <button class="btn-place-order" type="button">Place order</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER FEATURES -->
+    <section class="footer-features">
+      <div class="container footer-feature-grid">
+        <div class="feature-card">
+          <h3>Free Delivery</h3>
+          <p>For all orders over $50, consectetur adipiscing elit. No hidden fees at checkout.</p>
+        </div>
+        <div class="feature-card">
+          <h3>90 Days Return</h3>
+          <p>If goods have problems, consectetur adipiscing elit. We’ll replace or refund.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Secure Payment</h3>
+          <p>100% secure payment, consectetur adipiscing elit using industry-standard encryption.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year-checkout"></span> Sell Campus. All rights reserved.
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    const navToggle = document.getElementById("nav-toggle");
+    const header = document.querySelector(".site-header");
+    navToggle.addEventListener("click", () => {
+      header.classList.toggle("nav-mobile-open");
+    });
+
+    const backToTop = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.getElementById("year-checkout").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

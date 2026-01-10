@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campus Store – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav" id="top">
+      <a href="index.html#home" class="logo">
+        <img src="logo.png" class="logo-img" alt="Sell Campus Logo">
+      </a>
+
+      <nav class="nav-links" aria-label="Main">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#category" class="nav-link">Category</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-search">
+        <i class="fa-solid fa-magnifying-glass icon" aria-hidden="true"></i>
+        <input type="search" placeholder="Search, find anything new" />
+        </div>
+
+
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Wishlist">
+          <span class="icon" aria-hidden="true">♡</span>
+        </button>
+
+        <!-- Cart goes to cart.html -->
+        <a class="nav-icon-btn" aria-label="Cart" href="cart.html">
+          <span class="icon" aria-hidden="true">🛒</span>
+          <span class="nav-icon-badge" id="cart-count">0</span>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div>
+          <p class="hero-kicker">Back to campus • New season</p>
+          <h1 class="hero-title">Carry Your Campus Life In Style</h1>
+          <p class="hero-subtitle">Thousands More Fun!</p>
+          <p class="hero-body">
+            Backpack & desk essentials curated for students. From crafted notebooks to headphones and hoodies, build a campus look that’s fully you.
+          </p>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Explore Now</a>
+            <a href="checkout.html" class="btn btn-ghost">View Info</a>
+          </div>
+          <div class="hero-badge-row">
+            <span><span class="hero-badge-dot"></span> Free delivery over $50</span>
+            <span><span class="hero-badge-dot"></span> 90-day free return</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            Bestseller backpacks
+          </div>
+          <div class="hero-figure">
+            <div class="hero-figure-inner"></div>
+          </div>
+          <div class="hero-floating-card">
+            <strong>Campus Combo Pack</strong>
+            <div class="hero-floating-badge">
+              <span></span> Up to 35% off
+            </div>
+            <span>Notebook • Tote • Headphones</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED CATEGORY -->
+    <section class="section" id="category">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-kicker">Shop by Category</p>
+          <h2 class="section-title">Featured Category</h2>
+        </header>
+
+        <div class="category-grid" aria-label="Featured categories">
+          <button class="category-item is-active" data-filter="all">
+            <i class="fa-solid fa-border-all"></i>
+            <span>All</span>
+          </button>
+
+          <button class="category-item" data-filter="notebook">
+            <i class="fa-solid fa-book"></i>
+            <span>Notebooks</span>
+          </button>
+
+          <button class="category-item" data-filter="bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Bags</span>
+          </button>
+
+          <button class="category-item" data-filter="fashion">
+            <i class="fa-solid fa-shirt"></i>
+            <span>Fashion</span>
+          </button>
+
+          <button class="category-item" data-filter="audio">
+            <i class="fa-solid fa-headphones"></i>
+            <span>Audio</span>
+          </button>
+
+          <button class="category-item" data-filter="accessory">
+            <i class="fa-solid fa-paperclip"></i>
+            <span>Accessories</span>
+          </button>
+        </div>
+
+        <!-- MINI BANNER -->
+        <div class="mini-banner">
+          <div class="mini-banner-text">
+            <h3>New arrivals</h3>
+            <h2>Headphones</h2>
+            <p>
+              Stay focused and tune out the noise with our student-friendly wireless headphones. Designed for long study hours and daily campus travel.
+            </p>
+            <a href="#products" class="btn btn-primary">Order Now</a>
+          </div>
+          <figure class="mini-banner-visual">
+            <img src="Hero2.jpg" alt="Student wearing headphones" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section" id="products">
+      <div class="container">
+        <header class="products-header">
+          <div>
+            <p class="section-kicker">Our Products</p>
+            <h2>Most loved by students</h2>
+          </div>
+          <div class="product-view-controls">
+            <div class="product-filter" aria-label="Filter products">
+              <button class="chip chip--active" data-filter-chip="all">All</button>
+              <button class="chip" data-filter-chip="notebook">Notebooks</button>
+              <button class="chip" data-filter-chip="bag">Bags</button>
+              <button class="chip" data-filter-chip="audio">Headphones</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="products-grid" id="product-grid">
+          <!-- Product cards -->
+          <article class="product-card" data-category="notebook">
+            <div class="product-thumb">
+              <span class="product-tag">New</span>
+              <img src="Crafted Notebook – Dotted.jpg" alt="Crafted notebook dotted" />
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Crafted Notebook – Dotted</h3>
+              <p class="product-meta">160 pages • Ivory paper • A5</p>
+              <div class="product-footer">
+                <div>
+                  <div class="price-label">Price</div>
+                  <div class="price-value">Tk. 150.00</div>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-add-cart" type="button" data-product="Crafted Notebook – Dotted">
+                    Add to Cart
+                  </button>
+                  <a href="checkout.html" class="btn-buy" data-product="Crafted Notebook – Dotted">
+                    BUY NOW <span aria-hidden="true">➜</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="notebook">
+            <div class="product-thumb">
+              <span class="product-tag">Bestseller</span>
+              <img src="Crafted Notebook – Grid.jpg" alt="Crafted notebook grid" />
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Crafted Notebook – Grid</h3>
+              <p class="product-meta">Soft cover • Vegan leather</p>
+              <div class="product-footer">
+                <div>
+                  <div class="price-label">Price</div>
+                  <div class="price-value">Tk. 180.00</div>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-add-cart" type="button" data-product="Crafted Notebook – Grid">
+                    Add to Cart
+                  </button>
+                  <a href="checkout.html" class="btn-buy" data-product="Crafted Notebook – Grid">
+                    BUY NOW <span aria-hidden="true">➜</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="bag">
+            <div class="product-thumb">
+              <span class="product-tag">Limited</span>
+              <img src="Campus Backpack – Sand.jpg" alt="Campus backpack sand" />
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Campus Backpack – Sand</h3>
+              <p class="product-meta">Laptop sleeve • Water resistant</p>
+              <div class="product-footer">
+                <div>
+                  <div class="price-label">Price</div>
+                  <div class="price-value">Tk. 1950.00</div>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-add-cart" type="button" data-product="Campus Backpack – Sand">
+                    Add to Cart
+                  </button>
+                  <a href="checkout.html" class="btn-buy" data-product="Campus Backpack – Sand">
+                    BUY NOW <span aria-hidden="true">➜</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="bag">
+            <div class="product-thumb">
+              <span class="product-tag">New color</span>
+              <img src="Everyday Canvas Tote.jpg" alt="Everyday canvas tote" />
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Everyday Canvas Tote</h3>
+              <p class="product-meta">Oversized • Inner pocket</p>
+              <div class="product-footer">
+                <div>
+                  <div class="price-label">Price</div>
+                  <div class="price-value">Tk. 890.00</div>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-add-cart" type="button" data-product="Everyday Canvas Tote">
+                    Add to Cart
+                  </button>
+                  <a href="checkout.html" class="btn-buy" data-product="Everyday Canvas Tote">
+                    BUY NOW <span aria-hidden="true">➜</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="audio">
+            <div class="product-thumb">
+              <span class="product-tag">Noise cancel</span>
+              <img src="Focus Over-Ear Headphones.jpg" alt="Focus headphones" />
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Focus Over-Ear Headphones</h3>
+              <p class="product-meta">Wireless • 30h battery</p>
+              <div class="product-footer">
+                <div>
+                  <div class="price-label">Price</div>
+                  <div class="price-value">Tk. 2450.00</div>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-add-cart" type="button" data-product="Focus Over-Ear Headphones">
+                    Add to Cart
+                  </button>
+                  <a href="checkout.html" class="btn-buy" data-product="Focus Over-Ear Headphones">
+                    BUY NOW <span aria-hidden="true">➜</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="fashion">
+            <div class="product-thumb">
+              <span class="product-tag">New</span>
+              <img src="Campus Hoodie – Cream.jpg" alt="Campus hoodie cream" />
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Campus Hoodie – Cream</h3>
+              <p class="product-meta">Unisex • Oversized fit</p>
+              <div class="product-footer">
+                <div>
+                  <div class="price-label">Price</div>
+                  <div class="price-value">Tk. 1650.00</div>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-add-cart" type="button" data-product="Campus Hoodie – Cream">
+                    Add to Cart
+                  </button>
+                  <a href="checkout.html" class="btn-buy" data-product="Campus Hoodie – Cream">
+                    BUY NOW <span aria-hidden="true">➜</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessory">
+            <div class="product-thumb">
+              <span class="product-tag">Bundle</span>
+              <img src="Desk Accessory Set.jpg" alt="Desk accessory set" />
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Desk Accessory Set</h3>
+              <p class="product-meta">Pen holder • Clips • Tray</p>
+              <div class="product-footer">
+                <div>
+                  <div class="price-label">Price</div>
+                  <div class="price-value">Tk. 650.00</div>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-add-cart" type="button" data-product="Desk Accessory Set">
+                    Add to Cart
+                  </button>
+                  <a href="checkout.html" class="btn-buy" data-product="Desk Accessory Set">
+                    BUY NOW <span aria-hidden="true">➜</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="notebook">
+            <div class="product-thumb">
+              <span class="product-tag">Pack of 3</span>
+              <img src="Study Notebook Trio.jpg" alt="Study notebook trio" />
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Study Notebook Trio</h3>
+              <p class="product-meta">Lines • Dots • Grid</p>
+              <div class="product-footer">
+                <div>
+                  <div class="price-label">Price</div>
+                  <div class="price-value">Tk. 420.00</div>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-add-cart" type="button" data-product="Study Notebook Trio">
+                    Add to Cart
+                  </button>
+                  <a href="checkout.html" class="btn-buy" data-product="Study Notebook Trio">
+                    BUY NOW <span aria-hidden="true">➜</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- INSTAGRAM / ABOUT -->
+        <section class="instagram" id="about">
+          <div class="instagram-text">
+            <h2>Our Instagram</h2>
+            <p>Follow our store for campus inspirations, setups from students, and weekly drops.</p>
+            <div class="instagram-handle">
+              <span>📷</span>
+              <span>@sellcampus.store</span>
+            </div>
+          </div>
+          <div class="instagram-grid">
+            <div class="instagram-item">
+              <img
+                src="https://images.pexels.com/photos/4144101/pexels-photo-4144101.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Notebook layout" />
+            </div>
+            <div class="instagram-item">
+              <img
+                src="https://images.pexels.com/photos/4144096/pexels-photo-4144096.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Desk flatlay" />
+            </div>
+            <div class="instagram-item">
+              <img
+                src="https://images.pexels.com/photos/4144165/pexels-photo-4144165.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Stationery" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about your order or our products, reach out anytime.</p>
+          </div>
+          <div class="contact-details">
+            <p><strong>Email:</strong> support@sellcampus.com</p>
+            <p><strong>Phone:</strong> +94 123 456 789</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER FEATURES -->
+    <section class="footer-features">
+      <div class="container footer-feature-grid">
+        <div class="feature-card">
+          <h3>Free Delivery</h3>
+          <p>For all orders over $50, consectetur adipiscing elit. No hidden fees at checkout.</p>
+        </div>
+        <div class="feature-card">
+          <h3>90 Days Return</h3>
+          <p>If goods have problems, consectetur adipiscing elit. We’ll replace or refund.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Secure Payment</h3>
+          <p>100% secure payment, consectetur adipiscing elit using industry-standard encryption.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year-home"></span> Sell Campus. All rights reserved.
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    // mobile nav toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const header = document.querySelector(".site-header");
+    navToggle.addEventListener("click", () => {
+      header.classList.toggle("nav-mobile-open");
+    });
+
+    // active nav link on scroll (only for sections on this page)
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll(".nav-links .nav-link");
+
+    function setActiveLink() {
+      let fromTop = window.scrollY + 120;
+      sections.forEach((section) => {
+        if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+          const id = section.getAttribute("id");
+          navLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            if (href.startsWith("#")) {
+              link.classList.toggle("active", href === "#" + id);
+            }
+          });
+        }
+      });
+    }
+    window.addEventListener("scroll", setActiveLink);
+
+    // product filter
+    const categoryButtons = document.querySelectorAll(".category-item");
+    const filterChips = document.querySelectorAll("[data-filter-chip]");
+    const productCards = document.querySelectorAll(".product-card");
+
+    function applyFilter(filter) {
+      productCards.forEach((card) => {
+        const category = card.getAttribute("data-category");
+        const show = filter === "all" || category === filter;
+        card.style.display = show ? "" : "none";
+      });
+    }
+
+    categoryButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        categoryButtons.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        filterChips.forEach((chip) => {
+          const f = chip.dataset.filterChip;
+          chip.classList.toggle(
+            "chip--active",
+            f === filter || (filter === "all" && f === "all")
+          );
+        });
+        applyFilter(filter);
+      });
+    });
+
+    filterChips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        const filter = chip.dataset.filterChip;
+        filterChips.forEach((c) => c.classList.remove("chip--active"));
+        chip.classList.add("chip--active");
+        categoryButtons.forEach((btn) => {
+          const f = btn.dataset.filter;
+          btn.classList.toggle(
+            "is-active",
+            f === filter || (filter === "all" && f === "all")
+          );
+        });
+        applyFilter(filter);
+      });
+    });
+
+    // simple cart count (increases on Add to Cart and Buy Now)
+    const cartCount = document.getElementById("cart-count");
+    let cartTotalItems = 0;
+
+    function incrementCart() {
+      cartTotalItems += 1;
+      cartCount.textContent = cartTotalItems;
+    }
+
+    document.querySelectorAll(".btn-add-cart").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        incrementCart();
+      });
+    });
+
+    document.querySelectorAll(".btn-buy").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        incrementCart();
+        // natural navigation continues to checkout.html
+      });
+    });
+
+    // back to top
+    const backToTop = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // dynamic year
+    document.getElementById("year-home").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
