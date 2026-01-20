@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Transactions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav" id="top">
+    <a href="dashboard.html#home" class="logo"><img src="logo.png" class="logo-img" alt="Logo"></a>
+
+    <nav class="nav-links" aria-label="Main">
+      <a href="dashboard.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Category</a>
+      <a href="customers.html" class="nav-link">About</a>
+      <a href="settings.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-search">
+      <i class="fa-solid fa-magnifying-glass icon"></i>
+      <input type="search" placeholder="Search, find anything..." id="global-search" />
+    </div>
+
+    <div class="nav-icons">
+      <button class="nav-icon-btn" aria-label="Apps"><i class="fa-solid fa-border-all icon"></i></button>
+      <button class="nav-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell icon"></i><span class="nav-icon-badge">3</span></button>
+      <button class="nav-icon-btn avatar-btn" aria-label="Profile"><img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="User"></button>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle"><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="dash-hero short">
+    <div class="dash-hero-overlay"><h1>Transactions</h1></div>
+  </section>
+
+  <section class="dash-wrap">
+    <div class="container dash-grid">
+
+      <aside class="dash-sidebar" id="dash-sidebar">
+        <button class="sidebar-close" id="sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+
+        <nav class="side-nav">
+          <a class="side-link" href="dashboard.html" data-page="dashboard"><i class="fa-solid fa-table-columns"></i><span>Dashboard</span></a>
+          <a class="side-link" href="products.html" data-page="products"><i class="fa-solid fa-box"></i><span>Products</span></a>
+          <a class="side-link" href="customers.html" data-page="customers"><i class="fa-solid fa-users"></i><span>Customers</span></a>
+          <a class="side-link" href="orders.html" data-page="orders"><i class="fa-solid fa-cart-shopping"></i><span>Orders</span></a>
+          <a class="side-link" href="shipments.html" data-page="shipments"><i class="fa-solid fa-truck"></i><span>Shipments</span></a>
+          <a class="side-link" href="transactions.html" data-page="transactions"><i class="fa-solid fa-credit-card"></i><span>Transactions</span></a>
+
+          <div class="side-divider"></div>
+
+          <a class="side-link" href="settings.html" data-page="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+          <a class="side-link side-logout" href="dashboard.html" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
+        </nav>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="overview-bar">
+          <div class="overview-left">
+            <button class="sidebar-open" id="sidebar-open" aria-label="Open sidebar"><i class="fa-solid fa-bars"></i></button>
+            <h2>Transactions</h2>
+          </div>
+
+          <div class="overview-right">
+            <div class="overview-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="page-search" placeholder="Search transactions..." />
+            </div>
+            <img class="overview-avatar" src="https://i.pravatar.cc/80?img=12" alt="Profile">
+          </div>
+        </div>
+
+        <div class="cards-grid single">
+          <section class="card card-wide" data-searchable="TXN-9001 card bkash cash paypal">
+            <div class="card-head simple">
+              <div>
+                <h3>Payment History</h3>
+                <p class="muted small">All transactions record</p>
+              </div>
+              <button class="chip-btn">Download</button>
+            </div>
+
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Txn ID</th>
+                    <th>Method</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TXN-9001</td>
+                    <td>Card</td>
+                    <td>Tk. 1500.00</td>
+                    <td>2026-01-18</td>
+                    <td><span class="pill ok">Success</span></td>
+                  </tr>
+                  <tr>
+                    <td>TXN-9002</td>
+                    <td>bKash</td>
+                    <td>Tk. 2450.00</td>
+                    <td>2026-01-17</td>
+                    <td><span class="pill ok">Success</span></td>
+                  </tr>
+                  <tr>
+                    <td>TXN-9003</td>
+                    <td>Cash</td>
+                    <td>Tk. 890.00</td>
+                    <td>2026-01-15</td>
+                    <td><span class="pill warn">Pending</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">© <span id="year"></span> Sell Campus. All rights reserved.</footer>
+<script src="script.js"></script>
+</body>
+</html>
