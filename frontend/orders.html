@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Settings</title>
+  <title>Orders</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/studentdashboard.css" />
 </head>
 <body>
 
@@ -18,7 +18,7 @@
       <a href="dashboard.html" class="nav-link">Home</a>
       <a href="products.html" class="nav-link">Category</a>
       <a href="customers.html" class="nav-link">About</a>
-      <a href="settings.html" class="nav-link active">Contact</a>
+      <a href="settings.html" class="nav-link">Contact</a>
     </nav>
 
     <div class="nav-search">
@@ -38,7 +38,7 @@
 
 <main>
   <section class="dash-hero short">
-    <div class="dash-hero-overlay"><h1>Settings</h1></div>
+    <div class="dash-hero-overlay"><h1>Orders</h1></div>
   </section>
 
   <section class="dash-wrap">
@@ -67,52 +67,71 @@
         <div class="overview-bar">
           <div class="overview-left">
             <button class="sidebar-open" id="sidebar-open" aria-label="Open sidebar"><i class="fa-solid fa-bars"></i></button>
-            <h2>Settings</h2>
+            <h2>Orders</h2>
           </div>
 
           <div class="overview-right">
+            <div class="overview-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="page-search" placeholder="Search orders..." />
+            </div>
             <img class="overview-avatar" src="https://i.pravatar.cc/80?img=12" alt="Profile">
           </div>
         </div>
 
         <div class="cards-grid single">
-          <section class="card card-wide" data-searchable="Settings profile email password">
+          <section class="card card-wide" data-searchable="Orders ORD-1001 ORD-1002 delivered pending cancelled">
             <div class="card-head simple">
               <div>
-                <h3>Profile Settings</h3>
-                <p class="muted small">Update your account details</p>
+                <h3>Order List</h3>
+                <p class="muted small">Track and manage all orders</p>
               </div>
+              <button class="chip-btn">Export</button>
             </div>
 
-            <form class="settings-form" id="settings-form">
-              <div class="form-grid">
-                <div class="form-field">
-                  <label class="form-label" for="name">Full Name</label>
-                  <input class="form-input" id="name" type="text" value="Ashfak Rahman" />
-                </div>
-
-                <div class="form-field">
-                  <label class="form-label" for="email">Email</label>
-                  <input class="form-input" id="email" type="email" value="student@example.com" />
-                </div>
-
-                <div class="form-field">
-                  <label class="form-label" for="pass">New Password</label>
-                  <input class="form-input" id="pass" type="password" placeholder="••••••••" />
-                </div>
-
-                <div class="form-field">
-                  <label class="form-label" for="confirm">Confirm Password</label>
-                  <input class="form-input" id="confirm" type="password" placeholder="••••••••" />
-                </div>
-              </div>
-
-              <button class="chip-btn" type="submit">Save Changes</button>
-            </form>
-
-            <p class="muted small" style="margin-top:.8rem">
-              This is a frontend demo. Connect backend to store settings permanently.
-            </p>
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ORD-1001</td>
+                    <td>Ayesha Rahman</td>
+                    <td>2026-01-18</td>
+                    <td>Tk. 1500.00</td>
+                    <td><span class="pill ok">Delivered</span></td>
+                  </tr>
+                  <tr>
+                    <td>ORD-1002</td>
+                    <td>John Smith</td>
+                    <td>2026-01-17</td>
+                    <td>Tk. 2450.00</td>
+                    <td><span class="pill warn">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>ORD-1003</td>
+                    <td>Sara Khan</td>
+                    <td>2026-01-15</td>
+                    <td>Tk. 890.00</td>
+                    <td><span class="pill warn">Processing</span></td>
+                  </tr>
+                  <tr>
+                    <td>ORD-1004</td>
+                    <td>Tanvir Ahmed</td>
+                    <td>2026-01-13</td>
+                    <td>Tk. 1650.00</td>
+                    <td><span class="pill warn">Shipped</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
         </div>
 
@@ -122,17 +141,6 @@
 </main>
 
 <footer class="site-footer">© <span id="year"></span> Sell Campus. All rights reserved.</footer>
-
 <script src="script.js"></script>
-<script>
-  // Settings form demo submit
-  const f = document.getElementById("settings-form");
-  if (f) {
-    f.addEventListener("submit", (e) => {
-      e.preventDefault();
-      alert("Settings saved (demo).");
-    });
-  }
-</script>
 </body>
 </html>
