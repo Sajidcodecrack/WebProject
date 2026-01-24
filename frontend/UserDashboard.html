@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/UserDashboard.css" />
+</head>
+
+<body>
+  <!-- checkbox toggle (no JS needed) -->
+  <input class="side-toggle" type="checkbox" id="sideToggle" />
+
+
+  <main>
+    <!-- HERO -->
+    <section class="dash-hero short">
+      <div class="dash-hero-overlay">
+        <h1>User Dashboard</h1>
+      </div>
+    </section>
+
+    <!-- DASHBOARD LAYOUT -->
+    <section class="dash-wrap">
+      <div class="container dash-grid">
+
+        <!-- SIDEBAR -->
+        <aside class="dash-sidebar" aria-label="User navigation">
+          <label class="sidebar-close" for="sideToggle" aria-label="Close sidebar">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+
+          <nav class="side-nav">
+            <a class="side-link active" href="UserDashboard.html">
+              <i class="fa-solid fa-table-columns"></i><span>Dashboard</span>
+            </a>
+
+            <a class="side-link" href="cart.html">
+              <i class="fa-solid fa-cart-shopping"></i><span>My Cart</span>
+            </a>
+
+            <a class="side-link" href="my_orders.html">
+              <i class="fa-solid fa-receipt"></i><span>My Orders</span>
+            </a>
+
+            <a class="side-link" href="post-product.html">
+              <i class="fa-solid fa-plus"></i><span>Post a Product</span>
+            </a>
+
+            <a class="side-link" href="StudentBusinessDashboard.html">
+              <i class="fa-solid fa-chart-line"></i><span>Student Business Dashboard</span>
+            </a>
+
+
+
+            <div class="side-divider"></div>
+
+
+            <a class="side-link" href="settings.html">
+              <i class="fa-solid fa-gear"></i><span>Settings</span>
+            </a>
+
+            <a class="side-link side-logout" href="student-login.html">
+              <i class="fa-solid fa-right-from-bracket"></i><span>Logout</span>
+            </a>
+          </nav>
+        </aside>
+
+        <!-- MAIN -->
+        <div class="dash-main">
+
+          <!-- CARDS GRID (simple) -->
+          <div class="cards-grid single">
+
+            <!-- QUICK ACTIONS -->
+            <section class="card">
+              <div class="card-head simple">
+                <div>
+                  <h3>Quick Actions</h3>
+                  <p class="muted small">Most used actions</p>
+                </div>
+              </div>
+
+              <div class="action-grid">
+ 
+                <a class="action-tile" href="cart.html">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <strong>My Cart</strong>
+                  <span>View cart items</span>
+                </a>
+
+                <a class="action-tile" href="my_orders.html">
+                  <i class="fa-solid fa-receipt"></i>
+                  <strong>My Orders</strong>
+                  <span>Track purchases</span>
+                </a>
+
+                <a class="action-tile" href="post-product.html">
+                  <i class="fa-solid fa-plus"></i>
+                  <strong>Post Product</strong>
+                  <span>Add a new listing</span>
+                </a>
+
+
+                <a class="action-tile" href="StudentBusinessDashboard.html">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <strong>Business</strong>
+                  <span>Analytics & stats</span>
+                </a>
+              </div>
+            </section>
+
+            <!-- RECENT ORDERS (small table) -->
+            <section class="card">
+              <div class="card-head simple">
+                <div>
+                  <h3>Recent Orders</h3>
+                  <p class="muted small">Latest purchases</p>
+                </div>
+                <a class="chip-btn" href="orders.html">VIEW ALL</a>
+              </div>
+
+              <div class="table-wrap">
+                <table class="dash-table">
+                  <thead>
+                    <tr>
+                      <th>Order</th>
+                      <th>Item</th>
+                      <th>Status</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#S-1042</td>
+                      <td>Graphing Calculator</td>
+                      <td><span class="pill ok">Delivered</span></td>
+                      <td>৳850</td>
+                    </tr>
+                    <tr>
+                      <td>#S-1038</td>
+                      <td>DSA Book</td>
+                      <td><span class="pill warn">Shipped</span></td>
+                      <td>৳320</td>
+                    </tr>
+                    <tr>
+                      <td>#S-1031</td>
+                      <td>Headphones</td>
+                      <td><span class="pill warn">Processing</span></td>
+                      <td>৳1,100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

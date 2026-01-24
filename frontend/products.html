@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/studentdashboard.css" />
+  <link rel="stylesheet" href="css/StudentBusinessDashboard.css" />
 </head>
 <body>
 
@@ -44,20 +44,46 @@
   <section class="dash-wrap">
     <div class="container dash-grid">
 
-      <aside class="dash-sidebar" id="dash-sidebar">
-        <button class="sidebar-close" id="sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
-        <nav class="side-nav">
-          <a class="side-link" href="dashboard.html" data-page="dashboard"><i class="fa-solid fa-table-columns"></i><span>Dashboard</span></a>
-          <a class="side-link" href="products.html" data-page="products"><i class="fa-solid fa-box"></i><span>Products</span></a>
-          <a class="side-link" href="customers.html" data-page="customers"><i class="fa-solid fa-users"></i><span>Customers</span></a>
-          <a class="side-link" href="orders.html" data-page="orders"><i class="fa-solid fa-cart-shopping"></i><span>Orders</span></a>
-          <a class="side-link" href="shipments.html" data-page="shipments"><i class="fa-solid fa-truck"></i><span>Shipments</span></a>
-          <a class="side-link" href="transactions.html" data-page="transactions"><i class="fa-solid fa-credit-card"></i><span>Transactions</span></a>
-          <div class="side-divider"></div>
-          <a class="side-link" href="settings.html" data-page="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
-          <a class="side-link side-logout" href="dashboard.html" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
-        </nav>
-      </aside>
+        <aside class="dash-sidebar" id="dash-sidebar">
+          <button class="sidebar-close" id="sidebar-close" aria-label="Close sidebar">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <nav class="side-nav" aria-label="Dashboard navigation">
+            <a class="side-link" href="StudentBusinessDashboard.html" data-page="dashboard">
+            <i class="fa-solid fa-chart-line"></i><span>Student Business Dashboard</span>
+            </a>
+
+            <a class="side-link" href="products.html" data-page="products">
+              <i class="fa-solid fa-box"></i><span>Products</span>
+            </a>
+            <a class="side-link" href="customers.html" data-page="customers">
+              <i class="fa-solid fa-users"></i><span>Customers</span>
+            </a>
+            <a class="side-link" href="orders.html" data-page="orders">
+              <i class="fa-solid fa-cart-shopping"></i><span>Orders</span>
+            </a>
+            <a class="side-link" href="shipments.html" data-page="shipments">
+              <i class="fa-solid fa-truck"></i><span>Shipments</span>
+            </a>
+            <a class="side-link" href="transactions.html" data-page="transactions">
+              <i class="fa-solid fa-credit-card"></i><span>Transactions</span>
+            </a>
+
+            <a class="side-link" href="UserDashboard.html">
+            <i class="fa-solid fa-chart-line"></i><span>Dashboard</span>
+            </a>
+
+            <div class="side-divider"></div>
+
+            <a class="side-link" href="settings.html" data-page="settings">
+              <i class="fa-solid fa-gear"></i><span>Settings</span>
+            </a>
+            <a class="side-link side-logout" href="dashboard.html" id="logout-btn">
+              <i class="fa-solid fa-right-from-bracket"></i><span>Logout</span>
+            </a>
+          </nav>
+        </aside>
 
       <div class="dash-main">
         <div class="overview-bar">

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Orders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/my_orders.css" />
+</head>
+
+<body>
+  <!-- sidebar toggle (no JS) -->
+  <input class="side-toggle" type="checkbox" id="sideToggle" />
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <img src="logo.png" class="logo-img" alt="SellIt Logo">
+      </a>
+
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="UserDashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-right">
+        <a class="icon-btn" href="cart.html" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <a class="icon-btn" href="settings.html" aria-label="Settings">
+          <i class="fa-solid fa-gear"></i>
+        </a>
+      </div>
+
+      <label class="nav-toggle" for="sideToggle" aria-label="Toggle sidebar">
+        <span></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-box">
+        <h1>My Orders</h1>
+        <p>Track your recent purchases and order status.</p>
+      </div>
+    </section>
+
+    <!-- DASHBOARD WRAP -->
+    <section class="dash-wrap">
+      <div class="container dash-grid">
+
+        <!-- SIDEBAR -->
+        <aside class="dash-sidebar" aria-label="User navigation">
+          <label class="sidebar-close" for="sideToggle" aria-label="Close sidebar">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+
+          <nav class="side-nav">
+            <a class="side-link" href="UserDashboard.html">
+              <i class="fa-solid fa-table-columns"></i><span>Dashboard</span>
+            </a>
+
+            <a class="side-link" href="cart.html">
+              <i class="fa-solid fa-cart-shopping"></i><span>My Cart</span>
+            </a>
+
+            <a class="side-link active" href="my_orders.html">
+              <i class="fa-solid fa-receipt"></i><span>My Orders</span>
+            </a>
+
+            <a class="side-link" href="post-product.html">
+              <i class="fa-solid fa-plus"></i><span>Post a Product</span>
+            </a>
+
+
+            <div class="side-divider"></div>
+
+
+            <a class="side-link" href="settings.html">
+              <i class="fa-solid fa-gear"></i><span>Settings</span>
+            </a>
+
+            <a class="side-link side-logout" href="student-login.html">
+              <i class="fa-solid fa-right-from-bracket"></i><span>Logout</span>
+            </a>
+          </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="dash-main">
+          <div class="overview-bar">
+            <div class="overview-left">
+              <label class="sidebar-open" for="sideToggle" aria-label="Open sidebar">
+                <i class="fa-solid fa-bars"></i>
+              </label>
+              <h2>Recent Orders</h2>
+            </div>
+
+            <div class="overview-right">
+              <img class="overview-avatar" src="https://i.pravatar.cc/80?img=12" alt="Profile">
+            </div>
+          </div>
+
+          <!-- controls -->
+          <div class="controls">
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" placeholder="Search by order id or item name..." />
+            </div>
+
+            <div class="filters">
+              <select aria-label="Filter by status">
+                <option value="all">All Status</option>
+                <option value="processing">Processing</option>
+                <option value="shipped">Shipped</option>
+                <option value="delivered">Delivered</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+
+              <button class="btn btn-light" type="button">
+                <i class="fa-solid fa-arrow-down-wide-short"></i> Sort
+              </button>
+            </div>
+          </div>
+
+          <!-- orders card -->
+          <div class="card">
+            <div class="card-head">
+              <h3>Orders List</h3>
+              <span class="count">Showing 3</span>
+            </div>
+
+            <div class="table-wrap" role="region" aria-label="Orders table">
+              <table class="orders-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Item</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Payment</th>
+                    <th class="right">Amount</th>
+                    <th class="right">Action</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><span class="mono">#S-1042</span></td>
+                    <td>Graphing Calculator</td>
+                    <td>Jan 20, 2026</td>
+                    <td><span class="pill ok">Delivered</span></td>
+                    <td><span class="pay paid">Paid</span></td>
+                    <td class="right">৳850</td>
+                    <td class="right">
+                      <a class="btn btn-outline btn-small" href="order-details.html">View</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="mono">#S-1038</span></td>
+                    <td>DSA Book</td>
+                    <td>Jan 16, 2026</td>
+                    <td><span class="pill warn">Shipped</span></td>
+                    <td><span class="pay paid">Paid</span></td>
+                    <td class="right">৳320</td>
+                    <td class="right">
+                      <a class="btn btn-outline btn-small" href="order-details.html">View</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="mono">#S-1031</span></td>
+                    <td>Headphones</td>
+                    <td>Jan 10, 2026</td>
+                    <td><span class="pill gray">Processing</span></td>
+                    <td><span class="pay due">Due</span></td>
+                    <td class="right">৳1,100</td>
+                    <td class="right">
+                      <a class="btn btn-outline btn-small" href="order-details.html">View</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Empty state (use when no orders) -->
+            <!--
+            <div class="empty">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <h3>No orders yet</h3>
+              <p>When you purchase items, your orders will appear here.</p>
+              <a class="btn btn-primary" href="products.html">Browse Products</a>
+            </div>
+            -->
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/studentdashboard.css" />
+  <link rel="stylesheet" href="css/StudentBusinessDashboard.css" />
 </head>
 
 <body>
@@ -54,7 +54,7 @@
     <!-- HERO / BANNER -->
     <section class="dash-hero" id="home">
       <div class="dash-hero-overlay">
-        <h1>Dashboard</h1>
+        <h1>Student Business  Dashboard</h1>
       </div>
     </section>
 
@@ -69,9 +69,10 @@
           </button>
 
           <nav class="side-nav" aria-label="Dashboard navigation">
-            <a class="side-link" href="dashboard.html" data-page="dashboard">
-              <i class="fa-solid fa-table-columns"></i><span>Dashboard</span>
+            <a class="side-link" href="StudentBusinessDashboard.html" data-page="dashboard">
+            <i class="fa-solid fa-chart-line"></i><span>Student Business Dashboard</span>
             </a>
+
             <a class="side-link" href="products.html" data-page="products">
               <i class="fa-solid fa-box"></i><span>Products</span>
             </a>
@@ -86,6 +87,10 @@
             </a>
             <a class="side-link" href="transactions.html" data-page="transactions">
               <i class="fa-solid fa-credit-card"></i><span>Transactions</span>
+            </a>
+
+            <a class="side-link" href="UserDashboard.html">
+            <i class="fa-solid fa-chart-line"></i><span>Dashboard</span>
             </a>
 
             <div class="side-divider"></div>
@@ -111,19 +116,7 @@
               <h2>Overview</h2>
             </div>
 
-            <div class="overview-right">
-              <div class="overview-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="page-search" placeholder="Search..." />
-              </div>
 
-              <div class="overview-icons">
-                <button class="mini-btn" aria-label="Menu"><i class="fa-solid fa-ellipsis"></i></button>
-                <button class="mini-btn" aria-label="Bell"><i class="fa-regular fa-bell"></i></button>
-              </div>
-
-              <img class="overview-avatar" src="https://i.pravatar.cc/80?img=12" alt="Profile">
-            </div>
           </div>
 
           <!-- CARDS GRID -->
@@ -136,10 +129,6 @@
                   <p class="muted">Total Revenue</p>
                   <h3 class="big">Tk. 68,000.00</h3>
                 </div>
-
-                <button class="chip-btn">
-                  THIS YEAR <i class="fa-solid fa-caret-down"></i>
-                </button>
               </div>
 
               <div class="bar-chart" aria-label="Revenue bar chart">
@@ -165,36 +154,27 @@
               </div>
             </section>
 
-            <!-- STUDENTS DONUTS -->
-            <section class="card" data-searchable="Students current new target retarget">
+
+            <section class="card" data-searchable="Stats Overview male female kids">
               <div class="card-head simple">
                 <div>
-                  <h3>Students</h3>
-                  <p class="muted small">Information About your Customers</p>
+                  <h3>Stats Overview</h3>
+                  <p class="muted small">Information about customers</p>
                 </div>
-                <button class="mini-btn" aria-label="Filter"><i class="fa-solid fa-sliders"></i></button>
               </div>
 
-              <div class="donut-grid">
-                <div class="donut-wrap">
-                  <div class="donut donut-purple" style="--p:85"><span>85%</span></div>
-                  <p class="donut-label">Current Customers</p>
+              <div class="progress-block">
+                <div class="progress-row">
+                  <span>Male Students</span><strong>63%</strong>
                 </div>
+                <div class="progress-bar"><i style="width:63%"></i></div>
+              </div>
 
-                <div class="donut-wrap">
-                  <div class="donut donut-yellow" style="--p:66"><span>66%</span></div>
-                  <p class="donut-label">New Customers</p>
+              <div class="progress-block">
+                <div class="progress-row">
+                  <span>Female Students</span><strong>88%</strong>
                 </div>
-
-                <div class="donut-wrap">
-                  <div class="donut donut-orange" style="--p:90"><span>90%</span></div>
-                  <p class="donut-label">Target Customers</p>
-                </div>
-
-                <div class="donut-wrap">
-                  <div class="donut donut-red" style="--p:30"><span>30%</span></div>
-                  <p class="donut-label">Retarget Customers</p>
-                </div>
+                <div class="progress-bar pink"><i style="width:88%"></i></div>
               </div>
             </section>
 
@@ -207,12 +187,6 @@
                 </div>
               </div>
 
-              <div class="mini-metrics">
-                <div class="mini-pill"><i class="fa-regular fa-user"></i><span>Total Visits</span><strong>10.8m</strong></div>
-                <div class="mini-pill"><i class="fa-solid fa-bag-shopping"></i><span>Total Sales</span><strong>100,345</strong></div>
-                <div class="mini-pill"><i class="fa-solid fa-wallet"></i><span>Total Made</span><strong>$200k</strong></div>
-                <div class="mini-pill"><i class="fa-solid fa-check"></i><span>Orders Done</span><strong>771</strong></div>
-              </div>
 
               <div class="table-wrap">
                 <table class="dash-table" id="top-products-table">
@@ -246,36 +220,7 @@
             </section>
 
             <!-- STATS OVERVIEW -->
-            <section class="card" data-searchable="Stats Overview male female kids">
-              <div class="card-head simple">
-                <div>
-                  <h3>Stats Overview</h3>
-                  <p class="muted small">Information about store visits</p>
-                </div>
-                <button class="mini-btn" aria-label="Filter"><i class="fa-solid fa-sliders"></i></button>
-              </div>
 
-              <div class="progress-block">
-                <div class="progress-row">
-                  <span>Male Students</span><strong>63%</strong>
-                </div>
-                <div class="progress-bar"><i style="width:63%"></i></div>
-              </div>
-
-              <div class="progress-block">
-                <div class="progress-row">
-                  <span>Female Students</span><strong>88%</strong>
-                </div>
-                <div class="progress-bar pink"><i style="width:88%"></i></div>
-              </div>
-
-              <div class="progress-block">
-                <div class="progress-row">
-                  <span>Kids</span><strong>38%</strong>
-                </div>
-                <div class="progress-bar purple"><i style="width:38%"></i></div>
-              </div>
-            </section>
 
           </div>
         </div>
