@@ -3,118 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product details</title>
-
-      <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/product-details.css">
 </head>
 <body>
-<body>
-      <!-- navbar -->
 
-      <nav class="flex justify-around items-center px-8 py-4 bg-white shadow">
-    <h1 class="text-xl font-bold">Sell it</h1>
-    <ul class="flex gap-6 text-sm">
-      <li><a href="#" class="hover:text-blue-600">Home</a></li>
-      <li><a href="#" class="hover:text-blue-600">Shop</a></li>
-      <li><a href="#" class="hover:text-blue-600">About</a></li>
-      <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h1 class="logo">Sell it</h1>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
 
     <img src="asset/div2.png" alt="">
-  </nav>
+</nav>
 
+<!-- PRODUCT SECTION -->
+<section class="product-section">
 
-  <!-- PRODUCT SECTION -->
-<section class="max-w-6xl mx-auto p-10 grid md:grid-cols-2 gap-10">
-
-  <!-- IMAGE (img will be fetched through API later) -->
-  <div class="bg-[#f7f2ee] p-6 rounded">
-    <img id="productImage" class="w-full rounded" src="asset/books.jpg" alt=""> 
-  </div>
-
-  <!-- DETAILS ((details will be fetched through API later)) -->
-  <div>
-    <h1 id="title" class="text-3xl font-semibold text-blue-300">Crafted notebook</h1>
-    <p id="price" class="text-lg mt-1 text-gray-400">150 tk</p>
-
-    <!-- Rating -->
-    <div class="flex items-center gap-2 mt-2 text-sm">
-      <span id="ratingStars"></span>
-      <span id="reviewCount" class="text-gray-600"></span>
+    <!-- IMAGE -->
+    <div class="product-image">
+        <img id="productImage" src="asset/books.jpg" alt="">
     </div>
 
-    <!-- Description (will bw fetched through API later) -->
-    <p id="shortDesc" class="mt-4 text-sm text-gray-700">A beautifully crafted notebook made for students who love to write, sketch, and stay organized. Durable, minimal, and perfect for everyday academic use.
+    <!-- DETAILS -->
+    <div class="product-details">
+        <h1 id="title">Crafted notebook</h1>
+        <p id="price">150 tk</p>
 
-</p>
+        <!-- Rating -->
+        <div class="rating">
+            <span id="ratingStars">★★★★☆</span>
+            <span id="reviewCount">(120 reviews)</span>
+        </div>
 
-    <!-- Size -->
-    <div class="mt-4">
-      <p class="text-lg mb-1">Size</p>
-      <div id="sizes" class="flex gap-2">L</div>
+        <!-- Short Description -->
+        <p id="shortDesc" class="short-desc">
+            A beautifully crafted notebook made for students who love to write,
+            sketch, and stay organized.
+        </p>
+
+        <!-- Size -->
+        <div class="option">
+            <p>Size</p>
+            <div class="badge">L</div>
+        </div>
+
+        <!-- Color -->
+        <div class="option">
+            <p>Color</p>
+            <div class="colors">
+                <span class="color black"></span>
+                <span class="color brown"></span>
+                <span class="color gray"></span>
+            </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="cart-section">
+            <div class="qty-box">
+                <button>-</button>
+                <span id="qty">1</span>
+                <button>+</button>
+            </div>
+
+            <button class="add-cart">Add To Cart</button>
+        </div>
+
+        <!-- Meta -->
+        <div class="meta">
+            <p><strong>SKU:</strong> ss001</p>
+            <p><strong>Category:</strong> notebook</p>
+            <p><strong>Tags:</strong> book, shop</p>
+        </div>
     </div>
-
-    <!-- Color -->
-    <div class="mt-4">
-      <p class="text-lg mb-1">Color</p>
-      <div id="colors" class="flex gap-2"></div>
-    </div>
-
-    <!-- Quantity + Cart -->
-    <div class="mt-6 flex items-center gap-4">
-      <div class="flex border rounded">
-        <button onclick="changeQty(-1)" class="px-3">-</button>
-        <span id="qty" class="px-4">1</span>
-        <button onclick="changeQty(1)" class="px-3">+</button>
-      </div>
-
-      <button class="border px-6 py-2 rounded hover:bg-black hover:text-white">
-        Add To Cart
-      </button>
-    </div>
-
-    <!-- Meta -->
-    <div class="mt-6 text-sm text-gray-700 space-y-1">
-      <p><strong>SKU:</strong> <span id="sku">ss001</span></p>
-      <p><strong>Category:</strong> notebook<span id="category"></span></p>
-      <p><strong>Tags:</strong> <span id="tags">book,shop</span></p>
-    </div>
-
-  </div>
 </section>
 
-<!-- DESCRIPTION TABS -->
-<section class="bg-[#f7f2ee] py-10 mb-10">
-  <div class="max-w-6xl mx-auto">
-    <h3 class="font-semibold mb-3">Description</h3>
-    <p id="fullDesc" class="text-sm text-gray-700">This handcrafted notebook is designed with premium paper and a sturdy cover to support everything from lecture notes to creative ideas. Each page offers a smooth writing experience suitable for pens, pencils, and markers. Lightweight yet durable, it fits easily in any backpack and withstands daily campus wear and tear. Whether you're jotting down assignments, creating diagrams, or journaling your thoughts, this notebook brings together practicality and aesthetic appeal to complement your academic lifestyle.</p>
-  </div>
+<!-- DESCRIPTION -->
+<section class="description">
+    <div class="description-box">
+        <h3>Description</h3>
+        <p id="fullDesc">
+            This handcrafted notebook is designed with premium paper and a sturdy
+            cover to support everything from lecture notes to creative ideas.
+        </p>
+    </div>
 </section>
 
-<section class="py-14">
-  <h2 class="text-center text-xl font-semibold mb-10 text-blue-900">
-    Related Products
-  </h2>
+<!-- RELATED PRODUCTS -->
+<section class="related">
+    <h2>Related Products</h2>
 
-  <div id="relatedProducts"
-       class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-    <!-- Cards injected here -->
+    <div class="related-grid">
+        <img src="asset/cal.jpg" alt="">
+        <img src="asset/final cover.jpg" alt="">
+        <img src="asset/cover.jpg" alt="">
+        <img src="asset/desk.jpg" alt="">
+    </div>
 
-    <img src="asset/cal.jpg" alt="">
-    <img src="asset/final cover.jpg" alt="">
-    <img src="asset/cover.jpg" alt="">
-    <img src="asset/desk.jpg" alt="">
-  </div>
-
-  <p class="text-center mt-10 text-sm text-blue-900 cursor-pointer hover:underline">
-    View More
-  </p>
+    <p class="view-more">View More</p>
 </section>
 
-<div id="footer"></div>
-
-
-<script src="script/product-details.js"></script>
 </body>
 </html>

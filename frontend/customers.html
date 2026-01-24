@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Orders</title>
+  <title>Customers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/studentdashboard.css" />
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <nav class="nav-links" aria-label="Main">
       <a href="dashboard.html" class="nav-link">Home</a>
       <a href="products.html" class="nav-link">Category</a>
-      <a href="customers.html" class="nav-link">About</a>
+      <a href="customers.html" class="nav-link active">About</a>
       <a href="settings.html" class="nav-link">Contact</a>
     </nav>
 
@@ -38,7 +38,7 @@
 
 <main>
   <section class="dash-hero short">
-    <div class="dash-hero-overlay"><h1>Orders</h1></div>
+    <div class="dash-hero-overlay"><h1>Customers</h1></div>
   </section>
 
   <section class="dash-wrap">
@@ -67,67 +67,67 @@
         <div class="overview-bar">
           <div class="overview-left">
             <button class="sidebar-open" id="sidebar-open" aria-label="Open sidebar"><i class="fa-solid fa-bars"></i></button>
-            <h2>Orders</h2>
+            <h2>Customers</h2>
           </div>
 
           <div class="overview-right">
             <div class="overview-search">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" id="page-search" placeholder="Search orders..." />
+              <input type="text" id="page-search" placeholder="Search customers..." />
             </div>
             <img class="overview-avatar" src="https://i.pravatar.cc/80?img=12" alt="Profile">
           </div>
         </div>
 
         <div class="cards-grid single">
-          <section class="card card-wide" data-searchable="Orders ORD-1001 ORD-1002 delivered pending cancelled">
+          <section class="card card-wide" data-searchable="Ayesha Rahman John Sara Tanvir Active Pending Blocked">
             <div class="card-head simple">
               <div>
-                <h3>Order List</h3>
-                <p class="muted small">Track and manage all orders</p>
+                <h3>Customer List</h3>
+                <p class="muted small">All registered customers</p>
               </div>
-              <button class="chip-btn">Export</button>
+              <button class="chip-btn">Add Customer</button>
             </div>
 
             <div class="table-wrap">
-              <table class="dash-table">
+              <table class="dash-table" id="customers-table">
                 <thead>
                   <tr>
-                    <th>Order ID</th>
-                    <th>Customer</th>
-                    <th>Date</th>
-                    <th>Total</th>
+                    <th>Name</th>
+                    <th>Email</th>
                     <th>Status</th>
+                    <th>Orders</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>ORD-1001</td>
                     <td>Ayesha Rahman</td>
-                    <td>2026-01-18</td>
-                    <td>Tk. 1500.00</td>
-                    <td><span class="pill ok">Delivered</span></td>
+                    <td>ayesha@mail.com</td>
+                    <td><span class="pill ok">Active</span></td>
+                    <td>12</td>
+                    <td><button class="mini-btn" onclick="alert('Viewing Ayesha (demo)')"><i class="fa-regular fa-eye"></i></button></td>
                   </tr>
                   <tr>
-                    <td>ORD-1002</td>
                     <td>John Smith</td>
-                    <td>2026-01-17</td>
-                    <td>Tk. 2450.00</td>
-                    <td><span class="pill warn">Pending</span></td>
+                    <td>john@mail.com</td>
+                    <td><span class="pill ok">Active</span></td>
+                    <td>5</td>
+                    <td><button class="mini-btn" onclick="alert('Viewing John (demo)')"><i class="fa-regular fa-eye"></i></button></td>
                   </tr>
                   <tr>
-                    <td>ORD-1003</td>
                     <td>Sara Khan</td>
-                    <td>2026-01-15</td>
-                    <td>Tk. 890.00</td>
-                    <td><span class="pill warn">Processing</span></td>
+                    <td>sara@mail.com</td>
+                    <td><span class="pill warn">Pending</span></td>
+                    <td>0</td>
+                    <td><button class="mini-btn" onclick="alert('Viewing Sara (demo)')"><i class="fa-regular fa-eye"></i></button></td>
                   </tr>
                   <tr>
-                    <td>ORD-1004</td>
                     <td>Tanvir Ahmed</td>
-                    <td>2026-01-13</td>
-                    <td>Tk. 1650.00</td>
-                    <td><span class="pill warn">Shipped</span></td>
+                    <td>tanvir@mail.com</td>
+                    <td><span class="pill warn">Blocked</span></td>
+                    <td>1</td>
+                    <td><button class="mini-btn" onclick="alert('Viewing Tanvir (demo)')"><i class="fa-regular fa-eye"></i></button></td>
                   </tr>
                 </tbody>
               </table>

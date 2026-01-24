@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 32px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.nav-img {
+    height: 40px;
+}
+
+/* Login Section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 900px;
+    background: #f8efec;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 28px;
+}
+
+/* Inputs */
+.login-box input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #2563eb;
+}
+
+/* Error */
+.error-msg {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: none;
+}
+
+/* Login Button */
+#login-btn {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #000;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#login-btn:hover {
+    background: #f1f1f1;
+}
+
+/* Forgot password */
+.forgot {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.forgot a {
+    text-decoration: none;
+    color: #000;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Signup */
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.signup-btn {
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 6px 16px;
+    border-radius: 6px;
+    background: #fff;
+    color: #000;
+}
+
+.signup-btn:hover {
+    background: #f1f1f1;
+}
+
+/* Social Login */
+.social-login {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-btn {
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.social-btn img {
+    width: 20px;
+}
+
+.social-btn:hover {
+    background: #f1f1f1;
+}

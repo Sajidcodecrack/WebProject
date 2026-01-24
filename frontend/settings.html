@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Customers</title>
+  <title>Settings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/studentdashboard.css" />
 </head>
 <body>
 
@@ -17,8 +17,8 @@
     <nav class="nav-links" aria-label="Main">
       <a href="dashboard.html" class="nav-link">Home</a>
       <a href="products.html" class="nav-link">Category</a>
-      <a href="customers.html" class="nav-link active">About</a>
-      <a href="settings.html" class="nav-link">Contact</a>
+      <a href="customers.html" class="nav-link">About</a>
+      <a href="settings.html" class="nav-link active">Contact</a>
     </nav>
 
     <div class="nav-search">
@@ -38,7 +38,7 @@
 
 <main>
   <section class="dash-hero short">
-    <div class="dash-hero-overlay"><h1>Customers</h1></div>
+    <div class="dash-hero-overlay"><h1>Settings</h1></div>
   </section>
 
   <section class="dash-wrap">
@@ -67,71 +67,52 @@
         <div class="overview-bar">
           <div class="overview-left">
             <button class="sidebar-open" id="sidebar-open" aria-label="Open sidebar"><i class="fa-solid fa-bars"></i></button>
-            <h2>Customers</h2>
+            <h2>Settings</h2>
           </div>
 
           <div class="overview-right">
-            <div class="overview-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" id="page-search" placeholder="Search customers..." />
-            </div>
             <img class="overview-avatar" src="https://i.pravatar.cc/80?img=12" alt="Profile">
           </div>
         </div>
 
         <div class="cards-grid single">
-          <section class="card card-wide" data-searchable="Ayesha Rahman John Sara Tanvir Active Pending Blocked">
+          <section class="card card-wide" data-searchable="Settings profile email password">
             <div class="card-head simple">
               <div>
-                <h3>Customer List</h3>
-                <p class="muted small">All registered customers</p>
+                <h3>Profile Settings</h3>
+                <p class="muted small">Update your account details</p>
               </div>
-              <button class="chip-btn">Add Customer</button>
             </div>
 
-            <div class="table-wrap">
-              <table class="dash-table" id="customers-table">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                    <th>Orders</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Ayesha Rahman</td>
-                    <td>ayesha@mail.com</td>
-                    <td><span class="pill ok">Active</span></td>
-                    <td>12</td>
-                    <td><button class="mini-btn" onclick="alert('Viewing Ayesha (demo)')"><i class="fa-regular fa-eye"></i></button></td>
-                  </tr>
-                  <tr>
-                    <td>John Smith</td>
-                    <td>john@mail.com</td>
-                    <td><span class="pill ok">Active</span></td>
-                    <td>5</td>
-                    <td><button class="mini-btn" onclick="alert('Viewing John (demo)')"><i class="fa-regular fa-eye"></i></button></td>
-                  </tr>
-                  <tr>
-                    <td>Sara Khan</td>
-                    <td>sara@mail.com</td>
-                    <td><span class="pill warn">Pending</span></td>
-                    <td>0</td>
-                    <td><button class="mini-btn" onclick="alert('Viewing Sara (demo)')"><i class="fa-regular fa-eye"></i></button></td>
-                  </tr>
-                  <tr>
-                    <td>Tanvir Ahmed</td>
-                    <td>tanvir@mail.com</td>
-                    <td><span class="pill warn">Blocked</span></td>
-                    <td>1</td>
-                    <td><button class="mini-btn" onclick="alert('Viewing Tanvir (demo)')"><i class="fa-regular fa-eye"></i></button></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <form class="settings-form" id="settings-form">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label class="form-label" for="name">Full Name</label>
+                  <input class="form-input" id="name" type="text" value="Ashfak Rahman" />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-input" id="email" type="email" value="student@example.com" />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="pass">New Password</label>
+                  <input class="form-input" id="pass" type="password" placeholder="••••••••" />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="confirm">Confirm Password</label>
+                  <input class="form-input" id="confirm" type="password" placeholder="••••••••" />
+                </div>
+              </div>
+
+              <button class="chip-btn" type="submit">Save Changes</button>
+            </form>
+
+            <p class="muted small" style="margin-top:.8rem">
+              This is a frontend demo. Connect backend to store settings permanently.
+            </p>
           </section>
         </div>
 
@@ -141,6 +122,17 @@
 </main>
 
 <footer class="site-footer">© <span id="year"></span> Sell Campus. All rights reserved.</footer>
+
 <script src="script.js"></script>
+<script>
+  // Settings form demo submit
+  const f = document.getElementById("settings-form");
+  if (f) {
+    f.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Settings saved (demo).");
+    });
+  }
+</script>
 </body>
 </html>
