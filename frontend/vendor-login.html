@@ -3,91 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vendor Log in</title>
-
-      <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vendor Login</title>
+    <link rel="stylesheet" href="css/vendor-login.css">
 </head>
 <body>
-    
-    <!-- navbar -->
 
-      <nav class="flex justify-around items-center px-8 py-4 bg-white shadow">
-    <h1 class="text-xl font-bold">Sell it</h1>
-    <ul class="flex gap-6 text-sm">
-      <li><a href="#" class="hover:text-blue-600">Home</a></li>
-      <li><a href="#" class="hover:text-blue-600">Shop</a></li>
-      <li><a href="#" class="hover:text-blue-600">About</a></li>
-      <li><a href="#" class="hover:text-blue-600">Contact</a></li>
-    </ul>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">Sell it</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <img src="asset/div2.png" alt="Decoration" class="nav-img">
+    </nav>
 
-    <img src="asset/div2.png" alt="">
-  </nav>
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-box">
 
-  <!-- login part -->
+            <h2>Login to Your Account</h2>
 
-   <section class="flex justify-center items-center min-h-[80vh]">
-    <div class="w-full max-w-6xl bg-[#f8efec] p-8 rounded-lg shadow-md">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
 
-      <h2 class="text-3xl font-bold text-center mb-8">Login to Your Account</h2>
+            <p id="errorMsg" class="error-msg">Invalid username or password</p>
 
-      <!-- Username -->
-      <div class="mb-4">
-        <input 
-          type="text" 
-          id="username"
-          placeholder="Username"
-          class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-200"
-        />
-      </div>
+            <button id="login-btn">Log in</button>
 
-      <!-- Password -->
-      <div class="mb-4">
-        <input 
-          type="password" 
-          id="password"
-          placeholder="Password"
-          class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-200"
-        />
-      </div>
+            <p class="forgot">
+                <a href="#">Forgot Password?</a>
+            </p>
 
-      <!-- error message -->
+            <div class="signup">
+                <span>Don’t Have Account?</span>
+                <a href="vendor-signup.html" class="signup-btn">Sign up</a>
+            </div>
 
-        <p id="errorMsg" class="text-red-500 text-sm mb-3 hidden"></p>
+            <div class="social-login">
+                <button class="social-btn">
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg">
+                    Login with Google
+                </button>
 
-        <!-- login button -->
+                <button class="social-btn">
+                    <img src="https://www.svgrepo.com/show/475647/facebook-color.svg">
+                    Login with Facebook
+                </button>
+            </div>
 
-      <button id="login-btn" class="w-52 border-2 px-6 py-2 rounded bg-white  hover:bg-gray-100 block mx-auto">Log in</button>
+        </div>
+    </section>
 
-       <!-- Forgot Password -->
-      <p class="text-center mt-4 text-sm">
-        <a href="#" class="hover:underline">Forgot Password?</a>
-      </p>
-
-      <!-- Signup -->
-      <div class="flex justify-center items-center gap-2 mt-4 text-sm">
-        <span>Don’t Have Account?</span>
-        <a href="vendor-signup.html" id="sign-up-btn" class="border px-4 py-2 rounded bg-white hover:bg-gray-100">Sign up</a>
-      </div>
-
-        <!-- Social Login -->
-      <div class="mt-6 space-y-3">
-        <button class="w-52 border py-2 rounded flex justify-center items-center mx-auto gap-2 hover:bg-gray-100">
-          <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5">
-          Login with Google
-        </button>
-
-        <button class="w-52 border py-2 rounded  flex justify-center items-center mx-auto gap-2 hover:bg-gray-100">
-          <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" class="w-5">
-          Login with Facebook
-        </button>
-      </div>
-
-
-      </div>
-
-</section>
-
-<script src="script/login.js"></script>
 </body>
 </html>

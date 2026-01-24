@@ -3,93 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <title>Approve Product</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/approve-post.css">
 </head>
 
-<body class="bg-[#dfd4cc]">
+<body>
 
-      <!-- navbar -->
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <h1 class="logo">Sell it</h1>
 
-      <nav class="flex justify-around items-center px-8 py-4 bg-white shadow">
-    <h1 class="text-xl font-bold">Sell it</h1>
-    <ul class="flex gap-6 text-sm">
-      <li><a href="#" class="hover:text-blue-600">Home</a></li>
-      <li><a href="#" class="hover:text-blue-600">Shop</a></li>
-      <li><a href="#" class="hover:text-blue-600">About</a></li>
-      <li><a href="#" class="hover:text-blue-600">Contact</a></li>
-    </ul>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
 
-    <img src="asset/div2.png" alt="">
-  </nav>
+  <img src="asset/div2.png" alt="Logo Image" class="nav-img">
+</nav>
 
 <!-- ================= PRODUCT DETAILS ================= -->
-<section class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+<section class="product-section">
 
   <!-- LEFT: PRODUCT IMAGE -->
-  <div class="bg-[#fff8e6] p-6 rounded-lg flex justify-center">
-    <img id="mainImage" src="asset/cal.jpg" alt="Product Image" class="max-h-[400px] object-contain">
+  <div class="product-image">
+    <img src="asset/cal.jpg" alt="Product Image">
   </div>
 
   <!-- RIGHT: PRODUCT INFO -->
-  <div>
-    <h1 id="title" class="text-2xl font-semibold mb-2">Scientific Calculator</h1>
-    <p id="price" class="text-lg font-medium mb-2">1200 tk</p>
+  <div class="product-info">
+    <h1 class="title">Scientific Calculator</h1>
+    <p class="price">1200 tk</p>
 
     <!-- Rating -->
-    <div class="flex items-center gap-1 text-yellow-500 mb-4">
+    <div class="rating">
       ★★★★☆
-      <span class="text-gray-500 text-sm ml-2">(Admin View)</span>
+      <span>(Admin View)</span>
     </div>
 
     <!-- Description -->
-    <p id="shortDesc" class="text-sm text-gray-700 mb-4">Scientific Caslculator combines modern minimal design with rugged arctic-grade durability. Its water-repellent outer layer, spacious compartments, and comfortable straps make it ideal for campus life or daily commute.</p>
+    <p class="short-desc">
+      Scientific Calculator combines modern minimal design with rugged arctic-grade durability.
+      Its water-repellent outer layer, spacious compartments, and comfortable straps make it ideal
+      for campus life or daily commute.
+    </p>
 
     <!-- Meta Info -->
-    <div class="text-sm text-gray-600 space-y-1 mb-6">
-      <p><strong>SKU:</strong> <span id="sku"></span></p>
-      <p><strong>Category:</strong> <span id="category"></span></p>
-      <p><strong>Tags:</strong> <span id="tags"></span></p>
+    <div class="meta">
+      <p><strong>SKU:</strong> <span></span></p>
+      <p><strong>Category:</strong> <span></span></p>
+      <p><strong>Tags:</strong> <span></span></p>
     </div>
 
     <!-- ACTION BUTTONS -->
-    <div class="flex gap-4">
-      <button
-        onclick="approveProduct()"
-        class="px-8 py-2 rounded-lg bg-green-500 text-white font-medium hover:bg-green-600">
-        Approve
-      </button>
-
-      <button
-        onclick="rejectProduct()"
-        class="px-8 py-2 rounded-lg bg-red-500 text-white font-medium hover:bg-red-600">
-        Reject
-      </button>
+    <div class="buttons">
+      <button class="approve-btn">Approve</button>
+      <button class="reject-btn">Reject</button>
     </div>
   </div>
+
 </section>
 
-<!-- ================= DESCRIPTION TABS ================= -->
-<section class="bg-white py-12">
-  <div class="max-w-6xl mx-auto px-6">
+<!-- ================= DESCRIPTION ================= -->
+<section class="description-section">
+  <div class="description-container">
 
-    <div class="border-b mb-6 flex gap-8 text-sm font-medium">
-      <button class="border-b-2 border-black pb-2">Description</button>
-      <button class="text-gray-400">Additional Information</button>
+    <div class="tabs">
+      <button class="active">Description</button>
+      <button>Additional Information</button>
     </div>
 
-    <p id="fullDesc" class="text-gray-700 text-sm leading-relaxed max-w-4xl">Scientific calculator combines modern minimal design with rugged arctic-grade durability. Its water-repellent outer layer, spacious compartments, and comfortable straps make it ideal for campus life or daily commute.
-Whether you're heading to class, the library, or a weekend trip, the Green Arctic Bag keeps your essentials organized and protected. Lightweight build with premium green finish for a fresh, modern look.Crafted from eco-friendly, recycled materials, the Green Arctic Bag is built for students who want style without harming the environment. Strong, spacious, and comfortable—your perfect everyday companion.</p>
+    <p class="full-desc">
+      Scientific calculator combines modern minimal design with rugged arctic-grade durability.
+      Its water-repellent outer layer, spacious compartments, and comfortable straps make it ideal
+      for campus life or daily commute.
+      <br><br>
+      Whether you're heading to class, the library, or a weekend trip, the Green Arctic Bag keeps
+      your essentials organized and protected.
+      <br><br>
+      Crafted from eco-friendly, recycled materials, it is built for students who want style
+      without harming the environment.
+    </p>
 
-    <!-- IMAGE GALLERY -->
-    <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10"></div>
+    <div class="gallery"></div>
 
   </div>
 </section>
-
-<div id="footer"></div>
-
-<!-- ================= SCRIPT ================= -->
-<script src="script/approve-post.js"></script>
 
 </body>
 </html>
